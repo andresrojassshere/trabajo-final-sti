@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" style="margin-bottom: 1400px">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sliders</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <a href="{{ url_for('landing') }}">
+      <img src="../static/images/logo_blanco.png" alt="Logo" class="logo" />
+    </a>
+    <div class="card">
+      <h2>Selecciona tus preferencias:</h2>
+
+      <!-- Formulario para enviar los sliders -->
+      <form action="{{ url_for('resultados') }}" method="post">
+        <!-- Slider 1 -->
+        <div class="slider-container">
+          <div class="slider-item">
+            <label for="color"
+              ><h1>
+                1. ¿Prefieres una paleta de colores vibrantes o una de tonos
+                neutros?
+              </h1></label
+            >
+            <img src="../static/images/pregunta1.png" alt="Imagen 1" />
+            <div class="slider-labels">
+              <span class="label-left">Vibrantes</span>
+              <span class="label-right">Neutros</span>
+            </div>
+            <div class="slider-wrapper">
+              <div class="slider-numbers">
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>5</span>
+              </div>
+              <input
+                type="range"
+                name="color"
+                min="1"
+                max="5"
+                value="3"
+                step="1"
+                class="slider"
+              />
+            </div>
+          </div>
+
+          <!-- Slider 2 -->
+          <div class="slider-item">
+            <label for="estilo"
+              ><h1>2. ¿Qué tan formal prefieres tu estilo de vestir?</h1></label
+            >
+            <img src="../static/images/pregunta2.png" alt="Imagen 2" />
+            <div class="slider-labels">
+              <span class="label-left">Casual</span>
+              <span class="label-right">Formal</span>
+            </div>
+            <div class="slider-wrapper">
+              <div class="slider-numbers">
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>5</span>
+              </div>
+              <input
+                type="range"
+                name="estilo"
+                min="1"
+                max="5"
+                value="3"
+                step="1"
+                class="slider"
+              />
+            </div>
+          </div>
+
+          <!-- Slider 3 -->
+          <div class="slider-item">
+            <label for="textura"
+              ><h1>
+                3. ¿Qué tan a menudo usas prendas con estampados o diseños
+                llamativos?
+              </h1></label
+            >
+            <img src="../static/images/pregunta3.png" alt="Imagen 3" />
+            <div class="slider-labels">
+              <span class="label-left">Nunca</span>
+              <span class="label-right">Siempre</span>
+            </div>
+            <div class="slider-wrapper">
+              <div class="slider-numbers">
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>5</span>
+              </div>
+              <input
+                type="range"
+                name="textura"
+                min="1"
+                max="5"
+                value="3"
+                step="1"
+                class="slider"
+              />
+            </div>
+          </div>
+
+          <!-- Slider 4 -->
+          <div class="slider-item">
+            <label for="ajuste"
+              ><h1>4. ¿Cómo prefieres que se ajusten tus prendas?</h1></label
+            >
+            <img src="../static/images/pregunta4.png" alt="Imagen 4" />
+            <div class="slider-labels">
+              <span class="label-left">Holgado</span>
+              <span class="label-right">Ajustado</span>
+            </div>
+            <div class="slider-wrapper">
+              <div class="slider-numbers">
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>5</span>
+              </div>
+              <input
+                type="range"
+                name="ajuste"
+                min="1"
+                max="5"
+                value="3"
+                step="1"
+                class="slider"
+              />
+            </div>
+          </div>
+
+          <!-- Slider 5 -->
+          <div class="slider-item">
+            <label for="tendencia"
+              ><h1>
+                5. ¿Qué tan dispuesto/a estás a seguir las tendencias de moda
+                actuales?
+              </h1></label
+            >
+            <img src="../static/images/pregunta5.png" alt="Imagen 5" />
+            <div class="slider-labels">
+              <span class="label-left">Nada dispuesto/a</span>
+              <span class="label-right">Muy dispuesto/a</span>
+            </div>
+            <div class="slider-wrapper">
+              <div class="slider-numbers">
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>5</span>
+              </div>
+              <input
+                type="range"
+                name="tendencia"
+                min="1"
+                max="5"
+                value="3"
+                step="1"
+                class="slider"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- enviar los sliders -->
+        <button class="bttn" type="submit" id="ver-resultados-btn">
+          Ver Resultados
+        </button>
+      </form>
+    </div>
+  </body>
+</html>

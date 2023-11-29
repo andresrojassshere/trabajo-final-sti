@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bienvenido a la Pinta</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='landing.css') }}"
+    />
+  </head>
+  <body>
+    <a href="{{ url_for('landing') }}">
+      <img src="../static/images/logo_blanco.png" alt="Logo" class="logo" />
+    </a>
+    <div class="container-wrapper">
+      <div class="left-landing-container">
+        <h1></h1>
+        <p></p>
+        <a href="{{ url_for('index') }}" class=""></a>
+      </div>
+      <div class="right-landing-container">
+        <h5>Moda Sostenible a tu Medida</h5>
+        <h3>
+          ¡Explora resultados personalizados que se adaptan a tu estilo único!
+          Gracias por realizar nuestro quiz y descubrir marcas locales
+          colombianas sostenibles que no solo cuidan el planeta, sino que
+          también reflejan tu personalidad a través de la moda. ¡Únete a la moda
+          con propósito!
+        </h3>
+        <a href="{{ url_for('index') }}" class="start-btn">Comenzar</a>
+      </div>
+    </div>
+  </body>
+</html>

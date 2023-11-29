@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resultados</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='resultados.css') }}"
+    />
+  </head>
+  <body>
+    <a href="{{ url_for('landing') }}">
+      <img src="../static/images/logo_blanco.png" alt="Logo" class="logo" />
+    </a>
+    <div class="card">
+      <h1>Resultados</h1>
+      <img
+        class="imagen"
+        src="../static/images/resultados.png"
+        alt="resultados"
+      />
+      <h3>
+        ¡Estamos muy emocionados con los resultados que se adaptan a tu estilo
+        único!
+      </h3>
+
+      <h2>
+        Agradecemos tu participación en el cuestionario, donde descubrimos
+        marcas locales colombianas sostenibles que benefician al planeta y te
+        permiten expresar tu personalidad a través de la moda.
+      </h2>
+      <h2>
+        ¡Gracias por ser parte de esta experiencia que fusiona moda y
+        sostenibilidad!
+      </h2>
+
+      <!-- mostrar los resultados aquí -->
+      <div id="resultados" class="resultados-container">
+        {% for tienda, porcentaje in resultados %}
+        <div class="card_two">
+          <div class="inner-card">
+            <h1>{{ tienda }}</h1>
+            <div id="resultados" class="resultados-container">
+              <p>
+                <span class="porcentaje">{{ porcentaje|round(3) }}%</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+      <!-- botón para repetir el quiz -->
+      <a href="{{ url_for('index') }}"
+        ><button class="bttn" id="repetir-quiz-btn">Repetir Quiz</button></a
+      >
+    </div>
+  </body>
+</html>
